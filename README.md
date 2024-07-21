@@ -1,0 +1,3 @@
+# Driver for two motors using two ProDriver TC78H670FTG parts
+
+This library is adapted from [Sparkfun's ProDriver TC78H670FTG library](https://github.com/sparkfun/SparkFun_ProDriver_TC78H670FTG_Arduino_Library). It specializes to only support the simultaneous control of two ProDrivers in serial mode. This allows both commands to be sent simultaneously by sharing many pins. This halves the time sent doing GPIO serial communication. It also changes to leave the GPIO pins in output mode and toggle their state rather than switching them to input mode and using on-board pull-up resistors. I found this to be much too slow on the ESP32 for my application.
